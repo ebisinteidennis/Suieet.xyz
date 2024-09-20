@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sweetest Meme on SUI - Candy Crush the Web3 World!</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #4AA9FF;
+            color: #FFFFFF;
+            height: 100%;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #FFA149;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 1em;
+            max-width: 800px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .cta-button {
+            background-color: #FFA149;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.1em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            background-color: #FF8C00;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .feature {
+            flex-basis: 100%;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+        }
+        .feature h3 {
+            color: #FFA149;
+            margin-bottom: 10px;
+        }
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .social-button {
+            background-color: #FFFFFF;
+            color: #4AA9FF;
+            border: none;
+            padding: 8px 16px;
+            font-size: 0.9em;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .social-button:hover {
+            transform: scale(1.05);
+            background-color: #FFA149;
+            color: #FFFFFF;
+        }
+        .candy-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .candy {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="10" y="30" width="80" height="40" rx="20" ry="20" fill="%23FFA149" /><circle cx="30" cy="50" r="5" fill="%23FFF" /><circle cx="70" cy="50" r="5" fill="%23FFF" /><path d="M40 60 Q50 70 60 60" stroke="%23FFF" stroke-width="3" fill="none" /></svg>');
+            background-size: contain;
+            animation: fall linear infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes fall {
+            0% { transform: translateY(-5vh) rotate(0deg); }
+            100% { transform: translateY(105vh) rotate(360deg); }
+        }
+        @media (min-width: 768px) {
+            .logo { width: 200px; height: 200px; }
+            h1 { font-size: 3em; }
+            h2 { font-size: 1.8em; }
+            p { font-size: 1.2em; }
+            .feature { flex-basis: 30%; }
+            .cta-button { padding: 15px 30px; font-size: 1.2em; }
+            .social-button { padding: 10px 20px; font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="candy-background" id="candyBackground"></div>
+    <div class="container">
+        <img src="logo.png" alt="Sweet Meme Logo" class="logo">
+        <h1>The Sweetest Meme on SUI</h1>
+        <h2>Candy Crush the Web3 World!</h2>
+        <p>Unwrap the future of digital collectibles with our sugar-coated blockchain sensation. It's not just a meme, it's a sweet revolution!</p>
+        <!-- <button class="cta-button">Mint Your Candy Now!</button> -->
+        
+        <p>Join the sweetest community in the metaverse. Our delectable tokens are more than just eye candy – they're your golden ticket to exclusive rewards, games, and a whole lot of fun!</p>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>🍭 Sweet Rewards</h3>
+                <p>Stake your candies and watch your rewards grow sweeter by the minute!</p>
+            </div>
+            <div class="feature">
+                <h3>🎮 Sugar Rush Games</h3>
+                <p>Play, compete, and earn in our addictively fun mini-games!</p>
+            </div>
+            <div class="feature">
+                <h3>🌈 Rare Flavors</h3>
+                <p>Collect limited edition candies with jaw-dropping rarity!</p>
+            </div>
+        </div>
+        
+        <p>Don't let this sweet deal melt away. Join now and taste the future of Web3!</p>
+        <!-- <button class="cta-button">Get Your Sugar Rush!</button> -->
+        
+        <div class="social-buttons">
+            <a href="https://x.com/Suieet_" class="social-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                Twitter
+            </a>
+            <a href="https://t.me/Suieetcommunity" class="social-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81z"></path><polygon points="10 15 15 12 10 9 10 15"></polygon></svg>
+                Telegram
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function createCandy() {
+            const candy = document.createElement('div');
+            candy.classList.add('candy');
+            candy.style.left = Math.random() * 100 + 'vw';
+            candy.style.animationDuration = (Math.random() * 3 + 5) + 's'; // Slower fall
+            candy.style.opacity = Math.random() * 0.5 + 0.5; // Vary opacity
+            document.getElementById('candyBackground').appendChild(candy);
+            
+            setTimeout(() => {
+                candy.remove();
+            }, 8000);
+        }
+
+        // Create initial set of candies
+        for (let i = 0; i < 20; i++) {
+            createCandy();
+        }
+
+        // Continue adding candies at intervals
+        setInterval(createCandy, 300);
+    </script>
+</body>
+</html>
