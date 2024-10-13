@@ -6,364 +6,376 @@
     <title>Suieet - The Sweetest Meme on SUI</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-        
-        :root {
-            --primary-color: #4AA9FF;
-            --secondary-color: #FFA149;
-            --text-color: #FFFFFF;
-            --background-color: #3498db;
-            --feature-bg: rgba(255, 255, 255, 0.2);
-        }
-        
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, var(--primary-color), var(--background-color));
-            color: var(--text-color);
-            height: 100%;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            min-height: 100vh;
-            text-align: center;
-            padding: 20px;
-            box-sizing: border-box;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            position: relative;
-        }
-        
-        .logo {
-            width: 140px;
-            height: 140px;
-            margin-right: 20px;
-            animation: float 3s ease-in-out infinite;
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-        }
-        
-        .brand-name {
-            font-family: 'Fredoka One', cursive;
-            font-size: 6em;
-            font-weight: bold;
-            color: var(--secondary-color);
-            text-shadow: 4px 4px 8px rgba(0,0,0,0.3);
-            position: relative;
-            z-index: 2;
-        }
-        
-        .brand-name::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background-color: var(--secondary-color);
-            transform: scaleX(0);
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        .brand-name:hover::after {
-            transform: scaleX(1);
-        }
-        
-        h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-            text-rendering: optimizeLegibility;
-        }
-        
-        h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-            color: var(--text-color);
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
-            position: relative;
-            display: inline-block;
-        }
-        
-        h1::before, h1::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            width: 60px;
-            height: 4px;
-            background-color: var(--secondary-color);
-        }
-        
-        h1::before {
-            left: -70px;
-        }
-        
-        h1::after {
-            right: -70px;
-        }
-        
-        h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: var(--secondary-color);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        p {
-            font-size: 1.3em;
-            max-width: 800px;
-            margin-bottom: 25px;
-            line-height: 1.8;
-            opacity: 0.9;
-            font-weight: 500;
-        }
-        
-        .cta-button {
-            background-color: var(--secondary-color);
-            color: var(--text-color);
-            border: none;
-            padding: 18px 40px;
-            font-size: 1.3em;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            font-weight: bold;
-        }
-        
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                120deg,
-                transparent,
-                rgba(255, 255, 255, 0.6),
-                transparent
-            );
-            transition: all 0.5s;
-        }
-        
-        .cta-button:hover::before {
-            left: 100%;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-        }
-        
-        .features {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 60px;
-            gap: 40px;
-        }
-        
-        .feature {
-            flex-basis: calc(33.333% - 40px);
-            margin-bottom: 30px;
-            padding: 30px;
-            background-color: var(--feature-bg);
-            border-radius: 25px;
-            backdrop-filter: blur(15px);
-            transition: all 0.3s ease;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        .feature:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        .feature h3 {
-            color: var(--secondary-color);
-            margin-bottom: 20px;
-            font-size: 1.8em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        .social-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 50px;
-        }
-        
-        .social-button {
-            background-color: var(--text-color);
-            color: var(--primary-color);
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.1em;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-            font-weight: bold;
-        }
-        
-        .social-button:hover {
-            transform: translateY(-5px) scale(1.05);
-            background-color: var(--secondary-color);
-            color: var(--text-color);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
-        
-        .candy-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            opacity: 0.7;
-        }
-        
-        .candy {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="10" y="30" width="80" height="40" rx="20" ry="20" fill="%23FFA149" /><circle cx="30" cy="50" r="5" fill="%23FFF" /><circle cx="70" cy="50" r="5" fill="%23FFF" /><path d="M40 60 Q50 70 60 60" stroke="%23FFF" stroke-width="4" fill="none" /></svg>');
-            background-size: contain;
-            animation: fall linear infinite;
-            filter: drop-shadow(0 0 8px rgba(255, 161, 73, 0.8));
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-25px); }
-        }
-        
-        @keyframes fall {
-            0% { transform: translateY(-5vh) rotate(0deg); }
-            100% { transform: translateY(105vh) rotate(360deg); }
-        }
-        
-        #tokenomics {
-            background: linear-gradient(45deg, #3498db, #2980b9);
-            padding: 70px 40px;
-            margin-top: 80px;
-            border-radius: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        #tokenomics::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, transparent 40%);
-            animation: ripple 15s linear infinite;
-        }
-        
-        @keyframes ripple {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50%, 50%); }
-        }
-        
-        #tokenomics h2 {
-            color: var(--secondary-color);
-            font-size: 3em;
-            margin-bottom: 40px;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
-        }
-        
-        .tokenomics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-        
-        .tokenomics-item {
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 30px;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .tokenomics-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-        
-        .tokenomics-item h3 {
-            color: var(--secondary-color);
-            font-size: 2em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        @media (max-width: 768px) {
-            .brand-name {
-                font-size: 4em;
-            }
-            
-            h1 {
-                font-size: 3em;
-            }
-            
-            h2 {
-                font-size: 2.2em;
-            }
-            
-            .feature {
-                flex-basis: 100%;
-            }
-            
-            .tokenomics-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .logo-container {
-                flex-direction: column;
-            }
-            
-            .logo {
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
-        }
-        
-        @media (min-width: 1200px) {
-            .container {
-                max-width: 1200px;
-                margin: 0 auto;
-            }
-        }
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+:root {
+    --primary-color: #4AA9FF;
+    --secondary-color: #FFA149;
+    --text-color: #FFFFFF;
+    --background-color: #3498db;
+    --feature-bg: rgba(255, 255, 255, 0.2);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, var(--primary-color), var(--background-color));
+    color: var(--text-color);
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+}
+
+.brand-name {
+    font-family: 'Fredoka One', cursive;
+    font-size: 4em;
+    font-weight: bold;
+    color: var(--secondary-color);
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.brand-name::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.brand-name:hover::after {
+    transform: scaleX(1);
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+    position: relative;
+    display: inline-block;
+}
+
+h1::before, h1::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 4px;
+    background-color: var(--secondary-color);
+}
+
+h1::before {
+    left: -60px;
+}
+
+h1::after {
+    right: -60px;
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 16px 36px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.6),
+        transparent
+    );
+    transition: all 0.5s;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    gap: 40px;
+}
+
+.feature {
+    flex-basis: calc(33.333% - 40px);
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: var(--feature-bg);
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    transition: all 0.3s ease;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.feature h3 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.social-button {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 14px 28px;
+    font-size: 1em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.social-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.candy-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.7;
+}
+
+.candy {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="10" y="30" width="80" height="40" rx="20" ry="20" fill="%23FFA149" /><circle cx="30" cy="50" r="5" fill="%23FFF" /><circle cx="70" cy="50" r="5" fill="%23FFF" /><path d="M40 60 Q50 70 60 60" stroke="%23FFF" stroke-width="4" fill="none" /></svg>');
+    background-size: contain;
+    animation: fall linear infinite;
+    filter: drop-shadow(0 0 8px rgba(255, 161, 73, 0.8));
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+}
+
+@keyframes fall {
+    0% { transform: translateY(-5vh) rotate(0deg); }
+    100% { transform: translateY(105vh) rotate(360deg); }
+}
+
+#tokenomics {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    padding: 60px 30px;
+    margin-top: 70px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+#tokenomics::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, transparent 40%);
+    animation: ripple 15s linear infinite;
+}
+
+@keyframes ripple {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50%, 50%); }
+}
+
+#tokenomics h2 {
+    color: var(--secondary-color);
+    font-size: 2.6em;
+    margin-bottom: 35px;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+}
+
+.tokenomics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 35px;
+    margin-top: 35px;
+}
+
+.tokenomics-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tokenomics-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tokenomics-item h3 {
+    color: var(--secondary-color);
+    font-size: 1.8em;
+    margin-bottom: 18px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .brand-name {
+        font-size: 3em;
+    }
+    
+    h1 {
+        font-size: 2.4em;
+    }
+    
+    h2 {
+        font-size: 2em;
+    }
+    
+    .feature {
+        flex-basis: 100%;
+    }
+    
+    .tokenomics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .logo-container {
+        flex-direction: column;
+    }
+    
+    .logo {
+        width: 100px;
+        height: 100px;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .cta-button {
+        padding: 14px 30px;
+        font-size: 1.1em;
+    }
+    
+    .social-button {
+        padding: 12px 24px;
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
         </style>
 </head>
 <body>
@@ -403,22 +415,22 @@
             <div class="tokenomics-grid">
                 <div class="tokenomics-item">
                     <h3>Token Supply</h3>
-                    <p>420,690,000,000,000 $SUIEET</p>
+                    <p>10,000,000,000 $Suieet</p>
                 </div>
                 <div class="tokenomics-item">
                     <h3>75%</h3>
                     <p>LP ( CEX & DEX )</p>
                 </div>
-                <div class="tokenomics-item">
+                <!-- <div class="tokenomics-item">
                     <h3>10%</h3>
                     <p>GROWTH (MKT & MEDIA)</p>
                 </div>
                 <div class="tokenomics-item">
                     <h3>15%</h3>
                     <p>CONTRIBUTORS *</p>
-                </div>
+                </div> -->
             </div>
-            <p><small>* Vested linearly over 3 years starting June 29th, 2024.</small></p>
+            <!-- <p><small>* Vested linearly over 3 years starting June 29th, 2024.</small></p> -->
         </section>
         
         <div class="social-buttons">
