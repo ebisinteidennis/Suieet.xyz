@@ -327,55 +327,197 @@ p {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
-@media (max-width: 768px) {
-    .brand-name {
-        font-size: 3em;
-    }
-    
-    h1 {
-        font-size: 2.4em;
-    }
-    
-    h2 {
-        font-size: 2em;
-    }
-    
-    .feature {
-        flex-basis: 100%;
-    }
-    
-    .tokenomics-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .logo-container {
-        flex-direction: column;
-    }
-    
-    .logo {
-        width: 100px;
-        height: 100px;
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-    
-    .cta-button {
-        padding: 14px 30px;
-        font-size: 1.1em;
-    }
-    
-    .social-button {
-        padding: 12px 24px;
-        font-size: 0.9em;
-    }
-}
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-}
+#faq {
+            background: linear-gradient(45deg, #2980b9, #3498db);
+            padding: 60px 30px;
+            margin-top: 70px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #faq h2 {
+            color: var(--secondary-color);
+            font-size: 2.6em;
+            margin-bottom: 35px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .faq-item {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .faq-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .faq-item h3 {
+            color: var(--secondary-color);
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .faq-item p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+
+        #coin-type {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            padding: 60px 30px;
+            margin-top: 70px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #coin-type h2 {
+            color: var(--secondary-color);
+            font-size: 2.6em;
+            margin-bottom: 35px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .coin-type-content {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            word-wrap: break-word;
+        }
+
+        .coin-type-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .coin-type-content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+
+        footer {
+            background-color: #1a4b72;
+            padding: 30px 20px;
+            margin-top: 70px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .trading-text {
+            color: #4AA9FF;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .trading-platforms {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .platform-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #4AA9FF;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .platform-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .platform-icon img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .platform-icon a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .brand-name {
+                font-size: 3em;
+            }
+            
+            h1 {
+                font-size: 2.4em;
+            }
+            
+            h2 {
+                font-size: 2em;
+            }
+            
+            .feature {
+                flex-basis: 100%;
+            }
+            
+            .tokenomics-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo-container {
+                flex-direction: column;
+            }
+            
+            .logo {
+                width: 100px;
+                height: 100px;
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .cta-button {
+                padding: 14px 30px;
+                font-size: 1.1em;
+            }
+            
+            .social-button {
+                padding: 12px 24px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+        }
+
+
         </style>
 </head>
 <body>
@@ -415,12 +557,12 @@ p {
             <div class="tokenomics-grid">
                 <div class="tokenomics-item">
                     <h3>Token Supply</h3>
-                    <p>10,000,000,000 $Suieet</p>
+                    <p>10,000,000,00 $Suieet</p>
                 </div>
-                <!-- <div class="tokenomics-item">
-                    <h3>75%</h3>
-                    <p>LP ( CEX & DEX )</p>
-                </div> -->
+                <div class="tokenomics-item">
+                    <!-- <h3>75%</h3> -->
+                    <p>100% liquidity</p>
+                </div>
                 <!-- <div class="tokenomics-item">
                     <h3>10%</h3>
                     <p>GROWTH (MKT & MEDIA)</p>
@@ -432,6 +574,83 @@ p {
             </div>
             <!-- <p><small>* Vested linearly over 3 years starting June 29th, 2024.</small></p> -->
         </section>
+
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>What is $Suieet?</h3>
+                <p>$Suieet is a community-driven memecoin created out of the sweetest of codes. It's spreading positivity and fun on the Sui Blockchain. You can literally taste the memes, and it's Suieet!</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is the mission of $Suieet?</h3>
+                <p>Our mission is to bring a smile to crypto with Actually Sweet's infectious charm.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What are the core values of $Suieet?</h3>
+                <p>Our core values are Community, Kindness, and Fun.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What are the key features of $Suieet?</h3>
+                <p>
+                    - Community-driven memecoin<br>
+                    - Unique, adorable mascot (Actually Sweet)<br>
+                    - Sui Blockchain-based<br>
+                    - Positive, uplifting vibe
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>How can I join the Suieet Revolution?</h3>
+                <p>Join our community on Twitter and Telegram, participate in discussions, and spread the sweetness!</p>
+            </div>
+        </section>
+
+        <section id="coin-type">
+            <h2>Coin Type</h2>
+            <div class="coin-type-content">
+                <p>0xc0967b3bd5cce1382bd8e511af06a34794a6efd2726e680b0711e19393fe9023::suieet::SUIEET</p>
+            </div>
+        </section>
+
+
+
+        <footer>
+            <div class="footer-content">
+                <div class="trading-text">$SUIEET available for trading on Sui</div>
+                <div class="trading-platforms">
+                    <div class="platform-icon">
+                        <a href="https://app.cetus.zone/swap?from=0x2::sui::SUI&to=0xc0967b3bd5cce1382bd8e511af06a34794a6efd2726e680b0711e19393fe9023::suieet::SUIEET" target="_blank" rel="noopener noreferrer">
+                            <img src="cetus.png" alt="SuiSwap" width="30" height="30">
+                        </a>
+                    </div>
+                    <div class="platform-icon">
+                        <a href="https://dex.bluemove.net/swap/0x2::sui::SUI/0xc0967b3bd5cce1382bd8e511af06a34794a6efd2726e680b0711e19393fe9023::suieet::SUIEET" target="_blank" rel="noopener noreferrer">
+                            <img src="images.png" alt="Kretes" width="30" height="30">
+                        </a>
+                    </div>
+                    <div class="platform-icon">
+                        <a href="https://suivision.xyz/coin/0xc0967b3bd5cce1382bd8e511af06a34794a6efd2726e680b0711e19393fe9023::suieet::SUIEET" target="_blank" rel="noopener noreferrer">
+                            <img src="suivision.png" alt="Cetus" width="30" height="30">
+                        </a>
+                    </div>
+                    <!-- <div class="platform-icon">
+                        <a href="https://example.com/platform4" target="_blank" rel="noopener noreferrer">
+                            <img src="scallop.png" alt="Fleks" width="30" height="30">
+                        </a>
+                    </div>
+                    <div class="platform-icon">
+                        <a href="https://example.com/platform5" target="_blank" rel="noopener noreferrer">
+                            <img src="turbos.webp" alt="LightBulb" width="30" height="30">
+                        </a>
+                    </div> -->
+                    <div class="platform-icon">
+                        <a href="https://7k.ag/" target="_blank" rel="noopener noreferrer">
+                            <img src="ag7k.png" alt="Blupex" width="30" height="30">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
         
         <div class="social-buttons">
             <a href="https://x.com/Suieet_" class="social-button">
@@ -447,6 +666,9 @@ p {
             </a>
         </div>
     </div>
+
+
+    
 
     <script>
         function createCandy() {
